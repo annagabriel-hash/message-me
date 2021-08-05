@@ -8,9 +8,7 @@
     <div class="ui fluid raised card chatbox">
       <div class="content">
         <div class="ui feed">
-        <% @messages.each do |message| %>
-          <p class='fw-bold'><em><%= message.user.username.capitalize %></em>: <%= message.body %></p>
-        <% end %>
+          <%= render @messages %>
         </div>
       </div>
       <div class="extra content">
