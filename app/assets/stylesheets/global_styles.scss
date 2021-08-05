@@ -1,7 +1,14 @@
 @import 'semantic-ui';
 
+.fw-bold {
+  font-weight: bold;
+}
+
 #chatroom {
   .chatbox {
     min-height: 60vh;
+  }
+  p {
+    font-size: 1em
   }
 }

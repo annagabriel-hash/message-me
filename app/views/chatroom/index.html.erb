@@ -8,34 +8,9 @@
     <div class="ui fluid raised card chatbox">
       <div class="content">
         <div class="ui feed">
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <em>Elliot Fu</em>:
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <a>Stevie Feliciano</a> added <a>Elliot Fu</a> as a friend
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <a>Helen Troy</a> added <a>Christian Rocha</a> as a friend
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <a>Christian Rocha</a> signed up for the  site.
-              </div>
-            </div>
-          </div>
+        <% @messages.each do |message| %>
+          <p class='fw-bold'><em><%= message.user.username.capitalize %></em>: <%= message.body %></p>
+        <% end %>
         </div>
       </div>
       <div class="extra content">
