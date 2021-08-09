@@ -15,7 +15,8 @@ import 'jquery'
 import '@doabit/semantic-ui-sass'
 
 $(document).on("turbolinks:load", () => {
-  $('.ui.dropdown')
-    .dropdown()
-  ;
+  $('.ui.dropdown').dropdown();
+  $('.message .close').on('click', function() {
+    $(this).closest('.message').transition('fade');
+  });
 });
