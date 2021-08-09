@@ -12,12 +12,12 @@
         </div>
       </div>
       <div class="extra content">
-        <form class="ui reply form">
+        <%= form_with scope: @message, url: message_path, class: 'ui reply form' do |f| %>
           <div class='ui fluid icon input'>
-            <input type="text" placeholder="Search a very wide input...">
-            <i class="bordered inverted orange edit icon"></i>
+            <%= f.text_field :body, placeholder: 'Search a very wide input..' %>
+            <%= f.button sanitize('<i class="bordered inverted orange edit icon"></i>') %>
           </div>
-        </form> 
+        <% end %>
       </div>
     </div>
   </div>
