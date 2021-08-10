@@ -6,16 +6,16 @@
 <section class="ui two column grid" id='chatroom'>
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
-      <div class="content overflow-auto vh-60" data-scroll='auto'>
+      <div class="content overflow-auto vh-60" data-scroll="auto">
         <div class="ui feed" id='message-container'>
           <%= render @messages %>
         </div>
       </div>
       <div class="extra content">
-        <%= form_with scope: @message, url: message_path, class: 'ui reply form', local: false do |f| %>
+        <%= form_with scope: @message, url: message_path, class: 'ui reply form', data: { onsubmit: 'reset' }, local: false do |f| %>
           <div class='ui fluid icon input'>
             <%= f.text_field :body, placeholder: 'Search a very wide input..' %>
-            <%= f.button sanitize('<i class="bordered inverted orange edit icon"></i>') %>
+            <%= f.button sanitize('<i class="bordered inverted orange edit icon"></i>'), class: 'd-none' %>
           </div>
         <% end %>
       </div>
