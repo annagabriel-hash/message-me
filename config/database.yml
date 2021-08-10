@@ -14,24 +14,24 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-	default: &default
-	  adapter: postgresql
-	  encode: unicode
-	  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-	  timeout: 5000
-	  username: postgres
-	  password: postgres
-	  host: localhost
-	  post: 5432
-	development:
-	  <<: *default
-	  database: message_me_dev
-	# Warning: The database defined as "test" will be erased and
-	# re-generated from your development database when you run "rake".
-	# Do not set this db to the same as development or production.
-	test:
-	  <<: *default
-	  database: message_me_test
-	production:
-	  <<: *default
-	  database: message_me_prod
+default: &default
+  adapter: postgresql
+  encode: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: postgres
+  password: postgres
+  host: localhost
+  post: 5432
+development:
+  <<: *default
+  database: message_me_dev
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: message_me_test
+production:
+  <<: *default
+  database: message_me_prod
