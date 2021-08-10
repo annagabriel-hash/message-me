@@ -6,7 +6,7 @@
 <section class="ui two column grid" id='chatroom'>
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
-      <div class="content">
+      <div class="content overflow-auto vh-60" data-scroll='auto'>
         <div class="ui feed" id='message-container'>
           <%= render @messages %>
         </div>
@@ -23,7 +23,7 @@
   </div>
 
   <aside class="four wide column">
-    <div class='ui fluid raised card chatbox'>
+    <div class='ui fluid raised card chatbox min-vh-60'>
       <div class="content">
         <div class="ui inverted vertical menu">
           <a class="active item">Home</a>
